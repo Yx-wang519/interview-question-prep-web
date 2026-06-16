@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "hw": "Homework 10",
+    "topic": "Spring Boot",
+    "question": "What is AOP?",
+    "answer": "AOP stands for Aspect-Oriented Programming. It is used to separate cross-cutting concerns from business logic."
+  },
+  {
+    "id": 2,
+    "hw": "Homework 13",
+    "topic": "Database",
+    "question": "What is ACID?",
+    "answer": "ACID stands for Atomicity, Consistency, Isolation, and Durability."
+  }
+]
