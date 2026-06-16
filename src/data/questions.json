@@ -1,16 +1,153 @@
 [
   {
     "id": 1,
-    "hw": "Homework 10",
-    "topic": "Spring Boot",
-    "question": "What is AOP?",
-    "answer": "AOP stands for Aspect-Oriented Programming. It is used to separate cross-cutting concerns from business logic."
+    "hw": "HW1",
+    "topic": "Basic Java",
+    "question": "List vs Set",
+    "answer": "List is ordered and allows duplicate elements.\nSet does not allow duplicate elements. HashSet does not maintain order, while LinkedHashSet maintains insertion order and TreeSet keeps elements sorted."
   },
   {
     "id": 2,
-    "hw": "Homework 13",
-    "topic": "Database",
-    "question": "What is ACID?",
-    "answer": "ACID stands for Atomicity, Consistency, Isolation, and Durability."
+    "hw": "HW1",
+    "topic": "Basic Java",
+    "question": "LinkedList vs ArrayList",
+    "answer": "Both are implementations of the List interface.\nArrayList is backed by a dynamic array. It is fast for random access because we can get elements by index in O(1). However, inserting or deleting elements in the middle can be slower because elements may need to be shifted.\nLinkedList is backed by a doubly linked list. It is efficient for adding or removing elements, but random access is slower because it needs to traverse nodes."
+  },
+  {
+    "id": 3,
+    "hw": "HW1",
+    "topic": "Basic Java",
+    "question": "What is Map Interface",
+    "answer": "Map is an interface that stores data in key-value pairs.\nCommon implementations include HashMap, LinkedHashMap, TreeMap, Hashtable, and ConcurrentHashMap."
+  },
+  {
+    "id": 4,
+    "hw": "HW1",
+    "topic": "Basic Java",
+    "question": "How does HashMap work",
+    "answer": "In HashMap, a key is first converted to a hash value by calling hashCode(). The hash value is then used to calculate the array index, also called the bucket.\nIf multiple keys are mapped to the same bucket, HashMap compares the original keys using equals(). If the key already exists, the value is updated. Otherwise, a new entry is added to handle the hash collision."
+  },
+  {
+    "id": 5,
+    "hw": "HW1",
+    "topic": "Basic Java",
+    "question": "What is hash collision",
+    "answer": "A hash collision happens when two different keys generate the same hash value or are mapped to the same bucket.\nIn this case, multiple entries are stored in the same bucket. In Java HashMap, collisions are handled by using a linked list. If the number of entries in a bucket becomes large enough, the linked list can be converted into a red-black tree to improve lookup performance."
+  },
+  {
+    "id": 6,
+    "hw": "HW1",
+    "topic": "Basic Java",
+    "question": "What is Collections used for",
+    "answer": "The Java Collections Framework is a set of interfaces and classes used to store and manipulate groups of objects.\nCommon collection types include List, Set, Queue, Deque, and Map. It provides common operations such as adding, removing, searching, sorting, and iterating over elements."
+  },
+  {
+    "id": 7,
+    "hw": "HW1",
+    "topic": "Basic Java",
+    "question": "What is immutable class",
+    "answer": "An immutable class is a class whose object state cannot be changed after creation.\nString is a common immutable class in Java.\n\nTo create an immutable class:\n1. Make the class final so it cannot be extended.\n2. Make fields private and final.\n3. Do not provide setters.\n4. Initialize all fields through the constructor.\n5. If a field is mutable, return a defensive copy instead of the original object."
+  },
+  {
+    "id": 8,
+    "hw": "HW1",
+    "topic": "Basic Java",
+    "question": "Hashtable vs HashMap vs ConcurrentHashMap",
+    "answer": "HashMap is not thread-safe. It allows one null key and multiple null values.\nHashtable is thread-safe because its methods are synchronized, but it is legacy and slower. It does not allow null keys or null values.\nConcurrentHashMap is thread-safe and designed for concurrent access. It has better performance than Hashtable in multi-threaded environments. It does not allow null keys or null values."
+  },
+  {
+    "id": 9,
+    "hw": "HW1",
+    "topic": "Basic Java",
+    "question": "String vs StringBuilder vs StringBuffer",
+    "answer": "String is immutable and stored in the string constant pool when created as a string literal.\nStringBuilder is mutable but not thread-safe.\nStringBuffer is mutable and thread-safe because its methods are synchronized."
+  },
+  {
+    "id": 10,
+    "hw": "HW1",
+    "topic": "Basic Java",
+    "question": "Why do we need to override hashCode() and equals() at the same time",
+    "answer": "Hash-based collections such as HashMap and HashSet use hashCode() to find the bucket and equals() to compare objects inside the bucket. If we override equals() but not hashCode(), these collections may not work correctly."
+  },
+
+  
+  {
+    "id": 11,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "String vs StringBuilder vs StringBuffer",
+    "answer": "String -> immutable -> constant string pool\nStringBuilder -> mutable -> not thread safe\nStringBuffer -> mutable -> thread safe (synchronized)"
+  },
+  {
+    "id": 12,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "Comparator vs Comparable, when to use which one",
+    "answer": "Comparable is an interface implemented directly within a class template to provide a default, built-in sorting strategy by overriding the `compareTo` method\n\nComparator: external comparison rule, custom sorting\nstudents.sort((s1, s2) -> s2.age - s1.age); // negative return s1,s2; 0 no change; positive return s2,s1"
+  },
+  {
+    "id": 13,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "Overriding vs overloading",
+    "answer": "Overloading: same class, different signatures (same method name and different parameters), compile-time polymorphism\nOverriding: happens between parent class and child class, same signature but different logic, runtime polymorphism"
+  },
+  {
+    "id": 14,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "Java 8 basic data types",
+    "answer": "byte, short, int, long, float, double, char, boolean"
+  },
+  {
+    "id": 15,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "Primitive type, reference type",
+    "answer": "Primitive types store actual values. auto boxing\nReference types store references to objects, such as String, arrays, and custom classes.\nPrimitive types cannot be null, while reference types can be null."
+  },
+  {
+    "id": 16,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "JRE vs JDK vs JVM",
+    "answer": "The JVM is the Java Virtual Machine that runs Java bytecode and manages memory.\n\nThe JRE is the minimum runtime environment needed to run Java programs, and it includes the JVM and standard libraries.\n\nThe JDK (Java Development Kit) is used for development and includes the JRE, compiler, and development tools."
+  },
+  {
+    "id": 17,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "How does JVM work",
+    "answer": "The JVM loads compiled .class files, verifies the bytecode, and executes it on the operating system. It also manages memory, garbage collection, threads, and runtime exceptions.\n\nThis is why Java can be platform-independent: the same bytecode can run on different systems with different JVM implementations."
+  },
+  {
+    "id": 18,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "JVM memory data model",
+    "answer": "The JVM memory model includes areas such as the Method Area, Heap, Stack, Program Counter Register, and Native Method Stack. The heap stores objects, the stack stores method frames and local variables, and the method area stores class-level information such as static variables and class metadata."
+  },
+  {
+    "id": 19,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "How does GC work",
+    "answer": "Garbage Collection automatically reclaims memory from objects that are no longer reachable.\n\nIn Java, objects are created in the heap. The JVM usually starts from GC roots, finds reachable objects, and removes unreachable ones. This helps developers avoid manual memory management, but GC still consumes CPU and memory resources, so poor object management can affect performance."
+  },
+  {
+    "id": 20,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "young/old/perm generation",
+    "answer": "In Java heap memory, objects are usually divided into different generations because most objects die young.\n\nthe young generation stores newly created objects, and the old generation stores objects that survive multiple GC cycles. The permanent generation, or PermGen, used to store class metadata before Java 8, but it was replaced by Metaspace in Java 8."
+  },
+  {
+    "id": 21,
+    "hw": "HW2",
+    "topic": "Basic Java",
+    "question": "difference types of GC",
+    "answer": "Different garbage collectors are designed for different performance goals. For example, Serial GC is simple and suitable for small applications, Parallel GC focuses on throughput, G1GC balances throughput and pause time, and ZGC or Shenandoah are designed for very low pause times.\n\nIn real systems, we choose a GC based on application size, latency requirements, and memory usage."
   }
+
+  
 ]
