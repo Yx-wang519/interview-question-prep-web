@@ -3,6 +3,10 @@
 A simple React + Vite web application for organizing and reviewing interview preparation questions.
 The project stores questions in a local JSON file and allows users to browse, filter, and search questions without using a database.
 
+## Screenshot
+
+![Website Screenshot](./src/assets/screenshot.png)
+
 ## Current Features
 
 1. Organize questions by homework, such as HW1, HW2, HW3, etc.
