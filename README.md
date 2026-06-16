@@ -5,7 +5,7 @@ The project stores questions in a local JSON file and allows users to browse, fi
 
 ## Screenshot
 
-![Website Screenshot](./src/assets/screenshot.png)
+![Website Screenshot](./src/assets/websiteScreenshot.png)
 
 ## Current Features
 
